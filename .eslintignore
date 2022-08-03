@@ -1,0 +1,8 @@
+**/*.js
+/*.ts
+dist/
+benchmarks/
+node_modules/
+scripts/
+benchmarks/
+dev/

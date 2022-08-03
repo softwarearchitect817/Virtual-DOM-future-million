@@ -1,0 +1,152 @@
+{
+  "name": "million",
+  "version": "1.12.3-beta.3",
+  "description": "<1kb compiler-augmented virtual DOM. It's fast!",
+  "main": "dist/million.mjs",
+  "module": "dist/million.mjs",
+  "jsdelivr": "dist/million.mjs",
+  "unpkg": "dist/million.mjs",
+  "types": "dist/million.d.ts",
+  "scripts": {
+    "dev": "zx scripts/dev.mjs && vite",
+    "build": "zx scripts/build.mjs",
+    "cleanup": "prettier --write ./**/*.{ts,tsx}",
+    "lint": "eslint ./packages --ext .ts --cache",
+    "lint:fix": "pnpm lint --fix",
+    "test": "vitest run --coverage",
+    "test:dev": "vitest watch",
+    "typecheck": "tsc --noEmit",
+    "release": "zx scripts/release.mjs",
+    "bump": "bumpp && zx scripts/citation.mjs && pnpm publish",
+    "welcome": "zx scripts/welcome.mjs",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aidenybai/million.git"
+  },
+  "files": [
+    "dist/**/*",
+    "/*.d.ts"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/million.mjs",
+      "require": "./dist/million.cjs",
+      "types": "./dist/million.d.ts"
+    },
+    "./jsx-runtime": {
+      "import": "./dist/jsx-runtime.mjs",
+      "require": "./dist/jsx-runtime.cjs",
+      "types": "./jsx-runtime.d.ts"
+    },
+    "./router": {
+      "import": "./dist/router.mjs",
+      "require": "./dist/router.cjs",
+      "types": "./router.d.ts"
+    },
+    "./html": {
+      "import": "./dist/html.mjs",
+      "require": "./dist/html.cjs",
+      "types": "./html.d.ts"
+    },
+    "./morph": {
+      "import": "./dist/morph.mjs",
+      "require": "./dist/morph.cjs",
+      "types": "./morph.d.ts"
+    },
+    "./vite-plugin-million": {
+      "import": "./dist/vite-plugin-million.mjs",
+      "require": "./dist/vite-plugin-million.cjs",
+      "types": "./vite-plugin-million.d.ts"
+    },
+    "./utils": {
+      "import": "./dist/utils.mjs",
+      "require": "./dist/utils.cjs",
+      "types": "./utils.d.ts"
+    },
+    "./react": {
+      "import": "./dist/react.mjs",
+      "require": "./dist/react.cjs",
+      "types": "./react.d.ts"
+    },
+    "./react/client": {
+      "import": "./dist/react/client.mjs",
+      "require": "./dist/react/client.cjs",
+      "types": "./dist/react/client.d.ts"
+    },
+    "./react/jsx-dev-runtime": {
+      "import": "./dist/react/jsx-dev-runtime.mjs",
+      "require": "./dist/react/jsx-dev-runtime.cjs",
+      "types": "./dist/react/jsx-dev-runtime.d.ts"
+    },
+    "./react/jsx-runtime": {
+      "import": "./dist/react/jsx-runtime.mjs",
+      "require": "./dist/react/jsx-runtime.cjs",
+      "types": "./dist/react/jsx-runtime.d.ts"
+    },
+    "./react/scheduler": {
+      "import": "./dist/react/scheduler.mjs",
+      "require": "./dist/react/scheduler.cjs",
+      "types": "./dist/react/scheduler.d.ts"
+    },
+    "./react/server": {
+      "import": "./dist/react/server.mjs",
+      "require": "./dist/react/server.cjs",
+      "types": "./dist/react/server.d.ts"
+    }
+  },
+  "sideEffects": false,
+  "keywords": [
+    "million",
+    "virtualdom",
+    "vdom",
+    "library",
+    "web",
+    "ui",
+    "browser"
+  ],
+  "funding": "https://github.com/sponsors/aidenybai",
+  "author": {
+    "name": "Aiden Bai",
+    "email": "hello@aidenybai.com",
+    "url": "https://aidenybai.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aidenybai/million/issues"
+  },
+  "homepage": "https://github.com/aidenybai/million",
+  "prettier": "@vercel/style-guide/prettier",
+  "devDependencies": {
+    "@babel/core": "^7.18.10",
+    "@types/node": "^18.6.3",
+    "@typescript-eslint/eslint-plugin": "^5.32.0",
+    "@typescript-eslint/parser": "^5.32.0",
+    "@vercel/style-guide": "^3.0.0",
+    "bumpp": "^8.2.1",
+    "c8": "^7.12.0",
+    "esbuild": "^0.14.51",
+    "eslint": "^8.21.0",
+    "eslint-config-prettier": "^8.5.0",
+    "export-size": "^0.5.2",
+    "fsxx": "^0.1.0",
+    "husky": "^8.0.1",
+    "jsdom": "^20.0.0",
+    "np": "^7.6.2",
+    "ora": "^6.1.2",
+    "prettier": "^2.7.1",
+    "recast": "^0.21.1",
+    "simple-git": "^3.11.0",
+    "source-map": "^0.7.4",
+    "taze": "^0.7.6",
+    "tslib": "^2.4.0",
+    "turbo": "^1.4.2",
+    "typescript": "^4.7.4",
+    "unbuild": "^0.7.6",
+    "vite": "3.0.0",
+    "vitest": "^0.19.1",
+    "wouter": "2.8.0-alpha.2",
+    "zx": "^7.0.8"
+  }
+}
